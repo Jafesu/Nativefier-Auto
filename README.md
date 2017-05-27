@@ -21,3 +21,8 @@ and follow the prompts.
 
 After running it will create an alias for your user so you can open a terminal and run NewApp and it will auto magically run.
 
+
+### After installation
+If you want to add an icon to your application download the icon and put it in /home/<user>/webapps/<application>/resources/app/icon.png
+IT HAS TO BE NAMED icon.png
+
