@@ -3,7 +3,7 @@
 
 This is my Python script to automate Jiahogs Nativefier script.
 
-- REQUIREMENTS:
+## REQUIREMENTS:
 Python 3 installed (sudo apt-get install python3)
 
 NodeJS installed (sudo apt-get install NodeJS)
@@ -12,10 +12,10 @@ NPM installed (sudo apt-get install npm)
 
 Nativefier installed (GItHUb Repository is found Here: https://github.com/jiahaog/nativefier) To install (npm install nativefier -g)
 
-- USAGE
+## USAGE
 
 
-- First Time Running
+### First Time Running
 go to folder downloaded and run "python3 NewApp.py"
 and follow the prompts.
 
