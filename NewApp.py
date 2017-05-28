@@ -15,7 +15,7 @@ def getapp():
     apppath='/home/'+username+'/webapps/'+appname.lower()+'/'
     appsh='/home/'+username+'/webapps/'+appname+'.sh'
     appshort='/home/'+username+'/Desktop/'+appname+'.desktop'
-    alias="alias NewApp=/home/"+username+"/webapps/NewApp.py"
+    alias='alias NewApp="python3 /home/'+username+'/webapps/NewApp.py"'
     
     os.chdir('/home/'+username)
     os.system('nativefier '+appurl+' --name '+appname.lower())
@@ -35,6 +35,6 @@ def getapp():
     os.system('echo "Icon='+apppath+'/resources/app/icon.png">>'+appshort)
     os.system('chmod +x '+appshort)
     
-    os.system('wget https://github.com/Jafesu/Nativefier-Auto/raw/master/NewApp.py -P /home/'+username+'/webapps/NewApp.py')
+    os.system('wget https://github.com/Jafesu/Nativefier-Auto/raw/master/NewApp.py -P /home/'+username+'/webapps/')
     os.system('echo "'+alias+'">>~/.bash_aliases')
 getapp()
