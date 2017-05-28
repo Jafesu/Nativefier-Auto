@@ -15,7 +15,7 @@ def getapp():
     apppath='/home/'+username+'/webapps/'+appname.lower()+'/'
     appsh='/home/'+username+'/webapps/'+appname+'.sh'
     appshort='/home/'+username+'/Desktop/'+appname+'.desktop'
-    alias='alias NewApp="python3 /home/'+username+'/webapps/NewApp.py"'
+    alias="alias NewApp='python3 /home/"+username+"/webapps/NewApp.py'"
     
     os.chdir('/home/'+username)
     os.system('nativefier '+appurl+' --name '+appname.lower())
