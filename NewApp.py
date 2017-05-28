@@ -5,7 +5,7 @@ import shutil
 username = getpass.getuser()
 
 def getapp():
-
+    os.system('clear')
     appurl=str(input("What is the URL to the app you want to download? ").lower())
     if not 'http://' in appurl:
         if not 'https://' in appurl:
@@ -15,6 +15,7 @@ def getapp():
     apppath='/home/'+username+'/webapps/'+appname.lower()+'/'
     appsh='/home/'+username+'/webapps/'+appname+'.sh'
     appshort='/home/'+username+'/Desktop/'+appname+'.desktop'
+    alias="alias NewApp=/home/"+username+"/webapps/NewApp.py"
     
     os.chdir('/home/'+username)
     os.system('nativefier '+appurl+' --name '+appname.lower())
@@ -34,5 +35,9 @@ def getapp():
     os.system('echo "Icon='+apppath+'/resources/app/icon.png">>'+appshort)
     os.system('chmod +x '+appshort)
     
+    os.system('wget https://github.com/Jafesu/Nativefier-Auto/raw/master/NewApp.py -P /home/'+username+'/webapps/NewApp.py')
     
+    if not 'NewApp' in open('~/.bash_aliases').read():
+        os.system('touch ~/.bash_aliases')
+        os.system('echo "'+alias+'">>~/.bash_aliases')
 getapp()
