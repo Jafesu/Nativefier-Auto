@@ -36,8 +36,5 @@ def getapp():
     os.system('chmod +x '+appshort)
     
     os.system('wget https://github.com/Jafesu/Nativefier-Auto/raw/master/NewApp.py -P /home/'+username+'/webapps/NewApp.py')
-    
-    os.system('touch ~/.bash_aliases')
-    if not 'NewApp' in open('~/.bash_aliases').read():
-        os.system('echo "'+alias+'">>~/.bash_aliases')
+    os.system('echo "'+alias+'">>~/.bash_aliases')
 getapp()
