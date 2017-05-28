@@ -37,4 +37,5 @@ def getapp():
     
     os.system('wget https://github.com/Jafesu/Nativefier-Auto/raw/master/NewApp.py -P /home/'+username+'/webapps/')
     os.system('echo "'+alias+'">>~/.bash_aliases')
+    os.system('source ~/.bashrc')
 getapp()
